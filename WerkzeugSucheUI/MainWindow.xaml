@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WerkzeugSucheUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="800" FontSize="16">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1" Margin="-1,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="Recources/laser_cut-10-512.png" Width="30"/>
+            <ComboBox Grid.Column="2" Width="150"/>
+            <Button Grid.Column="3" Width="30" BorderBrush="#FF969696" Margin="-1,0,0,0" Padding="5">
+                <Image Source="Recources/1486395885-plus_80605 (1).png"/>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="3" Margin="-1,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Width="250"/>
+            <Button Grid.Column="1" Width="30" BorderBrush="#FF969696" Margin="-1,0,0,0" Padding="5">
+                <Image Source="Recources/Search_find_3519.png"/>
+            </Button>
+        </Grid>
         
+        <ListView Grid.Column="1" Grid.Row="5" >
+            <ListView.View>
+                <GridView >
+                    <GridView.Columns>
+                        <GridViewColumn Header="T" Width="50"/>
+                        <GridViewColumn Header="NAME" Width="130"/>
+                        <GridViewColumn Header="DOC" Width="150"/>
+                        <GridViewColumn Header="Zulätzt benutzt" Width="150"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
